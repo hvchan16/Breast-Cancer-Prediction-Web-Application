@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required MetaTags -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+		<title>Breast Cancer Prediction</title>
+		<style>
+			body{
+			background-image: url("http://www.pngall.com/wp-content/uploads/2017/11/Breast-Cancer-Ribbon-PNG.png");
+			height: 100%;
+			background-repeat: no-repeat;
+			background-color: #feb8c6;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Get input for predict the cancer -->
+		<center>
+		<h1>Enter the value of required attributes</h1>
+		<br>
+		<form action="{{ url_for('predict')}}"method="post" class="row g-3">
+			
+			<div class="center">
+				<div class="mb-3 col-auto">
+					<input  type="text" name="mean_radius" placeholder="Mean Radius" required="required" />
+					<input  type="text" name="mean_texture" placeholder="Mean Texture" required="required" />
+					<input  type="text" name="mean_perimeter" placeholder="Mean Perimeter" required="required" />
+					<input  type="text" name="mean_area" placeholder="Mean Area" required="required" />
+					<input  type="text" name="mean_smoothness" placeholder="Mean Smoothness" required="required" />
+					<input  type="text" name="mean_compactness" placeholder="Mean Compactness" required="required" />
+				</div>
+				<div class="mb-3 col-auto">
+					<input type="text" name="mean_concavity" placeholder="Mean Concavity" required="required" />
+					<input type="text" name="mean_concave_points" placeholder="Mean Concave Points" required="required" />
+					<input type="text" name="mean_symmetry" placeholder="Mean Symmetry" required="required" />
+					<input type="text" name="mean_fractal_dimension" placeholder="Mean Fractal Dimension" required="required" />
+					<input type="text" name="radius_error" placeholder="Radius Error" required="required" />
+					<input type="text" name="texture_error" placeholder="Texture Error" required="required" />
+				</div>
+				<div class="mb-3 col-auto">
+					<input type="text" name="perimeter_error" placeholder="Perimeter Error" required="required" />
+					<input type="text" name="area_error" placeholder="Area Error " required="required" />
+					<input type="text" name="smoothness_error" placeholder="Smoothness Error" required="required" />
+					<input type="text" name="compactness_error" placeholder="Compactness Error" required="required" />
+					<input type="text" name="concavity_error" placeholder="Concavity Error" required="required" />
+					<input type="text" name="concave_points_error" placeholder="Concave Points Error" required="required" />
+				</div>
+				<div class="mb-3 col-auto">
+					
+					<input type="text" name="symmetry_error" placeholder="Symmetry Error" required="required" />
+					<input type="text" name="fractal_dimension_error" placeholder="Fractal Dimension Error" required="required" />
+					<input type="text" name="worst_radius" placeholder="Worst Radius" required="required" />
+					<input type="text" name="worst_texture" placeholder="Worst Texture" required="required" />
+					<input type="text" name="worst_perimeter" placeholder="Worst Perimeter" required="required" />
+					<input type="text" name="worst_area" placeholder="Worst Area" required="required" />
+				</div>
+				<div class="mb-3 col-auto">
+					<input type="text" name="worst_smoothness" placeholder="Worst Smoothness" required="required" />
+					<input type="text" name="worst_compactness" placeholder="Worst Compactness" required="required" />
+					<input type="text" name="worst_concavity" placeholder="Worst Concavity" required="required" />
+					<input type="text" name="worst_concave_points" placeholder="Worst Concave Points" required="required" />
+					<input type="text" name="worst_symmetry" placeholder="'Worst Symmetry" required="required" />
+					<input type="text" name="worst_fractal_dimension" placeholder="Worst Fractal Dimension" required="required" />
+				</div>
+				
+				
+				<!-- Show button -->
+				<div class="button_cont" align="center">
+					<button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Cancer</strong></button>
+				</div>
+			</div>
+		</form>
+		</center>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+		</script>
+	</body>
+</html>
